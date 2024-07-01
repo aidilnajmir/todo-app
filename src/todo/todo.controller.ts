@@ -1,12 +1,16 @@
+// Modules and decorators import
 import { Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common';
 import { TodoService } from './todo.service';
 import { Todo } from './todo.entity';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 
+// TodoController class definition with Swagger documentation tags
 @ApiTags('todos')
 @Controller('todos')
 export class TodoController {
   constructor(private readonly todoService: TodoService) {}
+
+  // Endpoints for CRUD operations definition with Swagger documentation
 
   @ApiOperation({ summary: 'Get all to-dos' })
   @ApiResponse({ status: 200, description: 'Return all to-dos', type: [Todo] })

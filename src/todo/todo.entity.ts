@@ -1,6 +1,8 @@
+// Modules and decorators import
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 import { ApiProperty } from '@nestjs/swagger';
 
+// Todo entity definition with Swagger documentation properties
 @Entity()
 export class Todo {
   @ApiProperty({ description: 'The unique identifier of the to-do item' })

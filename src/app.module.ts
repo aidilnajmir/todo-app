@@ -1,8 +1,10 @@
+// Modules and classes import
 import { Module, MiddlewareConsumer, RequestMethod } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TodoModule } from './todo/todo.module';
 import { LoggerMiddleware } from './logger.middleware';
 
+// AppModule definition with imports and middleware configuration
 @Module({
   imports: [
     TypeOrmModule.forRoot({

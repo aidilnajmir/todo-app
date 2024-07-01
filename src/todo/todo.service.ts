@@ -1,8 +1,10 @@
+// Modules and decorators import
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Todo } from './todo.entity';
 
+// TodoService with CRUD methods and exception handling definition
 @Injectable()
 export class TodoService {
   constructor(
